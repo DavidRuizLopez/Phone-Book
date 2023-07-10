@@ -1,0 +1,190 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  background-color: aliceblue;
+}
+
+.title {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 6rem;
+}
+
+ .contacts {
+    margin: 5rem;
+ }
+
+ .contact {
+    display: flex;
+    border: 2px solid black;
+    background: rgba(194, 214, 217, 0.863);
+    height: 5rem;
+    justify-content: space-between;
+    transition: 0.2s ease-in-out;
+ }
+
+ .contact:hover {
+  transition: 0.2s ease-in-out;
+  background: rgba(218, 236, 255, 0.863);
+ }
+
+ .contact_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+ }
+
+ .contact_buttons {
+   display: flex;
+   gap: 2rem;
+   margin: 2rem;
+   align-items: center;
+ }
+
+
+ .phone_number {
+   display: flex;
+   align-items: center;
+   margin-top: -1rem;
+ }
+
+ .contact_number {
+    color: rgb(182, 179, 179);
+    text-decoration: none;
+ }
+
+ .icono {
+   height: 1rem;
+   width: 1rem;
+ }
+ 
+ .icono_edit_delete {
+   height: 2rem;
+   width: 2rem;
+   border: none;
+   background: none;
+ }
+
+ .add_button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(35, 174, 255);
+   border-radius: 5px;
+   width: 10rem;
+   height: 3rem
+ }
+ .add_button P {
+   color: white;
+   text-decoration: none;
+ }
+
+ .add_button:hover {
+  background-color: rgb(1, 117, 184);;
+ }
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background-color: rgb(35, 174, 255);
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.contact_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.searchbar_box {
+  border: 1px solid rgba(199, 196, 196, 0.767);
+  border-radius: 10px;
+  margin: 1rem;
+  width: 90%;
+  height: 2rem;
+  outline: none;
+}
+
+.searchbar_form {
+  margin: 1rem 5rem;
+}
+
+.search_button {
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: rgb(35, 174, 255);
+  border: 1px solid #91C9FF;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.search_button:hover {
+  transition: 0.2s ease-in-out;
+  background-color: rgb(12, 124, 189);
+}

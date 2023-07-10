@@ -1,0 +1,53 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="title">
+  <img class="logo" src="https://cdn-icons-png.flaticon.com/512/522/522512.png" alt="agenda">
+  <h1>Phone Book App</h1>
+</div>
+
+<div class="header">
+  <h1>Contacts</h1>
+
+  <%= link_to new_contact_path do %>
+    <div class="add_button">
+      <div class="center">
+        <button class="btn">
+          <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+          <span>+ Add contact</span>
+        </button>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= form_tag(contacts_path, method: :get, class: "searchbar_form") do %>
+  <%= text_field_tag(:search, params[:search], placeholder: "Buscar por nombre o apellido", class: "searchbar_box") %>
+  <%= submit_tag("Buscar", class: "search_button") %>
+<% end %>
+
+<div class="contacts" id="contacts">
+  <% @contacts.each do |contact| %>
+    <div class="contact">
+      <div class='contact_info'>
+        <h3><%= contact.first_name %> <%= contact.last_name %></h3>
+        <div class="phone_number">
+          <img class="icono" src="https://cdn-icons-png.flaticon.com/512/73/73552.png" alt="logo telefono" />
+          <span class="contact_number"><%= contact.phone_number %></span>
+        </div>
+      </div>
+      <div class="contact_buttons">
+        <%= link_to edit_contact_path(contact) do %>
+          <img class="icono_edit_delete" src="https://cdn-icons-png.flaticon.com/512/5840/5840946.png" alt="logo telefono" />
+        <% end %>
+        <%= button_to contact,class: "icono_edit_delete", method: :delete do %>
+          <img class="icono_edit_delete" src="https://cdn.icon-icons.com/icons2/868/PNG/512/trash_bin_icon-icons.com_67981.png" alt="logo telefono" />
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
